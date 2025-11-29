@@ -1,126 +1,243 @@
-body 
-{
-background-color: #ffc0ff ;
-background-repeat:repeat-y ;
-background-position: center top;
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-img
-{
-    width: 50px;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9faf9;
+    color: #333;
+    line-height: 1.6;
 }
 
-p
-{
-    background-color: rgb(250, 219, 215);
-}
-div
-{
-     background-color: rgb(110, 110, 238);
-    height: 100px;
-      color: black;
-    margin: 50px 50px 50px 30px;
-    padding:10px ;
-    border: 2px solid #ffc025;
-    border-radius:5px ;
-}
-.kontent
-{
-    background-color: rgb(110, 238, 138);
-    height: 150px;
-      color: black;
-    margin: 50px 50px 50px 30px;
-    padding:10px ;
-    border: 2px solid #ff2534;
-    border-radius:5px ;
+/* Шапка */
+header {
+    background: linear-gradient(90deg, #2e7d32, #4caf50);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.kontent1
-{
-   background-color: rgb(110, 221, 238);
-    height: 750px;
-      color: black;
-    margin: 50px 50px 50px 30px;
-    padding:10px ;
-    border: 2px solid #0c0102;
-    border-radius:5px ; 
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 2rem;
 }
 
-.kontent2
-{
-    background-color: rgb(238, 110, 200);
-    height: 400px;
-      color: black;
-    margin: 50px 50px 50px 30px;
-    padding:10px ;
-    border: 2px solid #ffe925;
-    border-radius:5px ;
-}
-.frobt
-{
-    background-color: rgb(51, 116, 124);
-    height: 150px;
-      color: black;
-    margin: 50px 50px 50px 30px;
-    padding:10px ;
-    border: 2px solid #0f0e03;
-    border-radius:5px ;
-}
-button
-{
-     width: 170;
-    height: 40;
+nav a {
     color: white;
-    background-color: black;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
 }
 
-button:hover
-{
-    transition: 1s; /* время раскрытия изменения кномки*/
-    width: 260px; /* длинна*/
-    height: 65px; /*высота */
-    background-color: red; /* цвет кгопки*/
-    color: white; /* цвет текста*/
-    border-radius: 10px; /* скругление углов */
-    cursor: pointer; /* изменения курсора*/
-}
-button:active
-{
-    background-color: chartreuse; /* именение цвета и формы при удержинии клика кнопки*/
-    border-radius: 15px;
+nav a:hover {
+    background: rgba(255,255,255,0.2);
 }
 
-a:link {/*цвет ссылки*/
-  color: blue;
-}
-a:visited{ /* цвет ссылки после прохождения по ней*/
-  color: brown;
-}
-a:active{ /* цвет ссылки при нажатии*/
-  color: coral;
+/* Основной контент */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-input
-{
-    border: 2px solid #ccc; /* обводка яцейки и ее цвет*/
-    padding: 5px; /* отступ в нутри ячейки*/
-    outline: none; /*убираем цвет заводский обводки */
-}
-input:focus
-{ /*при взаимодействии с полем для ввода */
-    border-color: chartreuse; /*изменение цвета обводки при нажатии */
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);/* создание тени, смещение по х, по Y, блюринк, цвет*/
+/* Популярная обувь */
+.popular-shoes h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2e7d32;
+    font-size: 2rem;
 }
 
-img
-{
-    border-radius: 20px; /*скругление углов*/
-    border: 2px solid #cc25cc;/*обводка*/
-    transition: 1s; /*вреня закрытия картики*/
+.shoe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
-img:hover
-{
-    filter: blur(5px); /*блюринг картинки*/
-    transition: 1s; /*время открытия картинки*/
+.shoe-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
 }
+
+.shoe-card:hover {
+    transform: translateY(-5px);
+}
+
+.shoe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.shoe-card h3 {
+    padding: 1rem;
+    color: #2e7d32;
+    font-size: 1.2rem;
+}
+
+.shoe-card p {
+    padding: 0 1rem 1rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Философия */
+.philosophy {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.philosophy-text {
+    flex: 1;
+}
+
+.philosophy-text h3 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.philosophy-text p {
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.philosophy-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Почему выбирают нас */
+.why-choose-us h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2e7d32;
+    font-size: 2rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.benefit-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4caf50;
+}
+
+.benefit-card h3 {
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.benefit-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Подвал */
+footer {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #81c784;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .popular-shoes h2,
+    .why-choose-us h2 {
+        font-size: 1.5rem;
+    }
+
+    .philosophy {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .philosophy-image img {
+        max-width: 100%;
+    }
+
+    .benefit-card .icon {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .shoe-card img,
+    .philosophy-image img {
+        height: 180px;
+    }
+
+    .shoe-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+}
+
